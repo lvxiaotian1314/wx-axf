@@ -1,2 +1,8 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<!--闪动超市-->
+<headerYellow district="深圳市民中心"></headerYellow>
+<view>
+  <scroll-view scroll-y class="category-left">
+    <view class="{{index===activeIndex?'category-left-categoryName active':'category-left-categoryName'}}"  wx:for="{{categories}}" wx:key="{{item.id}}" data-index="{{index}}" bindtap="select">{{item.name}}</view>
+  </scroll-view>
+  <view class="category-right"></view>
+</view>

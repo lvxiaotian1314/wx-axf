@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "headerYellow":"../../components/header-yellow/header-yellow"
+    "headerYellow": "../../components/header-yellow/header-yellow"
   }
 }

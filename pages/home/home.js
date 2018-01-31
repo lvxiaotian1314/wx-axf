@@ -28,7 +28,6 @@ Page({
     this.setData({
       categories:app.globalData.categories
     })
-    console.log(this.data.categories)
     wx.request({
       url: api.host+"/bannar",
       success:res=>{
