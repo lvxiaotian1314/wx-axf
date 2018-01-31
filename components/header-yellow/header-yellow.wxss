@@ -1,0 +1,40 @@
+/* components/header-yellow/header-yellow.wxss */
+.header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height: 90rpx;
+    z-index:3;
+    background:#ffd600;
+}
+.header-content{
+    position: absolute;
+    left: 120rpx;
+    right: 120rpx;
+    height:90rpx;
+    text-align: center;
+}
+.header-content>text{
+    line-height:90rpx;
+    font-weight:700;
+    font-size:30rpx;
+}
+.header-content>text:after{
+  content:"▼"
+}
+.search{
+    position: absolute;
+    right: 20rpx;
+    height:88rpx;
+}
+.search>image{
+  width:46rpx;
+  height:46rpx;
+  margin-top:4rpx;
+  vertical-align: top;
+}
+.search>text{
+  display: block;
+  font-size:28rpx;
+  letter-spacing: 4rpx;
+}

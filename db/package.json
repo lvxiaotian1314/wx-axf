@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "json-server": "^0.12.1",
+    "mockjs": "^1.0.1-beta3"
+  },
+  "scripts": {
+    "db": "json-server --watch db.json",
+    "mock": "node mock.js"
+  }
+}

@@ -1,0 +1,10 @@
+<!--header-yellow component  -->
+<view class="header">
+    <view class="header-content">
+        <text>{{district}}</text>
+    </view>
+    <view class="search">
+      <image src="./images/serach.png"></image>
+        <text>搜索</text>
+      </view>
+</view>
