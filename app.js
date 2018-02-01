@@ -66,6 +66,7 @@ App({
           }
         }
         this.globalData.categories=categories
+        console.warn(categories)
       }
     })
   }

@@ -58,7 +58,7 @@ var data = new Mock.mock({
       'categoryID|1-10': 3,
       //商品的图片
       'imgs': {
-        'min': '@image(80x80,@color)',
+        'min': '@image(80x80,@color,@cname)',
         "max": '@image(300x300,@color,@cname)'
       },
       //商品的名称
@@ -76,7 +76,9 @@ var data = new Mock.mock({
       // 该商品对应的子分类下标
       'cidsIndex|0-3': 10,
       //数量
-      'num': 0
+      'num': 0,
+      //商品的销量
+      'sales|10-100':3
     }
   ],
   //用户信息表
