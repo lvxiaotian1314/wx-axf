@@ -1,0 +1,7 @@
+<!--components/header-gray/header-gray.wxml-->
+<view class="header">
+    <slot></slot>
+    <view class="header-content">
+        <text>{{title}}</text>
+    </view>
+</view>

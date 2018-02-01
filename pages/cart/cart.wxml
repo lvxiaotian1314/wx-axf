@@ -1,2 +1,20 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<headerGray title="购物车">
+</headerGray>
+<view class='wraper'>
+  <view class='userAddress'>
+    <view>
+      <text>收<text class='position'>s</text>货<text class='position'>s</text>人</text>
+      <text class='userInfo'>吕新波先生</text>
+    </view>
+    <view>
+      <text>电<text class='position'>占位</text>话</text>
+      <text class='userInfo'>18566241993</text>
+    </view>
+    <view>
+      <text>收货地址</text>
+      <text class='userInfo'>深圳市宝安区232</text>
+    </view>
+    <view class='repair'>修改</view>
+  </view>
+</view>

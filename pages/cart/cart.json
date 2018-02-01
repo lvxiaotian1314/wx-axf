@@ -1,1 +1,6 @@
-{}
+{
+  "component": true,
+  "usingComponents": {
+    "headerGray": "../../components/header-gray/header-gray"
+  }
+}
