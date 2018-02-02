@@ -1,2 +1,37 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view>
+  <!--用户信息  -->
+  <view class='userInfo'>
+    <view class='user'>
+      <view class='pnone'>18566241993</view>
+      <view class='userLevel'>V0</view>
+    </view>
+  </view>
+  <!--商品收藏、店铺收藏-->
+  <view class='collect'>
+    <view>
+      <text>商品收藏</text>
+    </view>
+    <view>
+      <text>店铺收藏</text>
+    </view>
+  </view>
+  <scroll-view scroll-y>
+    <!--我的订单  -->
+    <view class='myOrder'>
+      <text>我的订单</text>
+      <text>查看全部订单</text>
+    </view>
+    <!--订单类型  -->
+    <view class='orderType'>
+      <view>待付款</view>
+      <view>待收货</view>
+      <view>待评价</view>
+      <view>退款/售后</view>
+    </view>
+    <!--积分商城、优惠券等  -->
+    <view class='score'></view>
+    <view class='score'></view>
+  </scroll-view>
+
+</view>
