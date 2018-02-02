@@ -9,6 +9,10 @@ view{
 .userInfo{
   height:120px;
   background:#ffd600;
+  position: fixed;
+  width:100%;
+  top:0;
+  z-index: 99;
 }
 .user{
   height:96px;
@@ -53,6 +57,10 @@ view.userLevel{
   height: 42px;
   background:#ffd600;
   display: flex;
+  position: fixed;
+  width:100%;
+  top:120px;
+  z-index: 99;
 }
 .collect>view{
   flex: 1;
@@ -86,6 +94,11 @@ view.userLevel{
 .collect>view:nth-of-type(2)>text{
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFrUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4l2lbsAAAB4dFJOUwAtBgrwD9LuEeGZAfwM86nj8eiWaFs0dUIukXmCX4/06v6V+97sycgbLBb2oPh7CG3gS1dgZXPtKFCFAgM818Mjr4Y2aZfp2LrlcJj9gE1kPl0ZFflOwRp+gVKhy8cY76glSvcn60YUHbC7HwU1t50NKqweJKLk4rGe4ZsAAAE6SURBVDjL7ZTVbsNAEEUnThqncZiZsczMzMzMzHg/v13bidRK2eS56jysz9hH9qx3NEQVhtnACS0zJK8D3GhuIwoCdpETFsBNnfEWfjFj0BNsZSrug45QXW5f/9IvaT20UkD/yOgPKV3M7Ngu4DAGiz2Cc3LgWM1ygLXwZAATvSpeIEsJHKnZFhDdVLD/u0W6FRSy8NLBIQICy3bWorvIrDLssmEcMQ/DqmukzES+U6RCyzNTMLmFDYiBcHtdPYzUg6TVFY6kEdMw2bMnd+D0ApF2do5hbYNE1GSRb99cKZ+VluaNkdZGmYc6jE5XjYyGxYQz6FcL9ml4v/LshK1a0yRP2o/fsvr5B6OH5k9LeXbMpuRTaedOh0t2fcDLa6nBk3tERpafRd7ksdwrr3x7/yw1eD6s+UpH4RdGRmWasOEo3wAAAABJRU5ErkJggg==) 0 0 no-repeat;
   background-size:20px;
+}
+/*滚动view  */
+.scroll{
+  position: absolute;
+  top:160px;
 }
 /*我的订单*/
 .myOrder{
