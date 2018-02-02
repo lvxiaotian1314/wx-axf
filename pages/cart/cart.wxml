@@ -3,7 +3,7 @@
 </headerGray>
 <view class='wraper'>
   <view class='userAddress'>
-    <view>
+    <view style=''>
       <text>收<text class='position'>s</text>货<text class='position'>s</text>人</text>
       <text class='userInfo'>吕新波先生</text>
     </view>
@@ -17,4 +17,37 @@
     </view>
     <view class='repair'>修改</view>
   </view>
+  <view class='supermarket'>
+    <view class='market'>
+      <view>
+        <text>闪送超市</text>
+        <text>凑单专区</text>
+      </view>
+      <view>¥0起送，22:00前满¥30免运费，22:00后满¥50免运费</view>
+    </view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value='{{timeIndex}}' range='{{timeArray}}' >
+      <view class="receive-goods">
+        <text>收货时间</text>
+        <text class='receive-time'>{{timeArray[0][timeIndex[0]]+" "+timeArray[1][timeIndex[1]] }}</text> 
+        <text>可预定</text>
+      </view>
+      
+    </picker>
+    <view class='receive-remark'>
+      <text>收货备注</text>
+      <input placeholder='可输入100字以内特殊要求内容' />
+    </view>
+  </view>
+
 </view>
+
+<view class="section">
+  <view class="section__title">多列选择器</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+  </picker>
+</view>
+
+

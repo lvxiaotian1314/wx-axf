@@ -60,7 +60,7 @@ view{
   right:0;
   z-index:999;
   background:#fff;
-  top:38px!important;
+  top:90rpx!important;
 }
 .category-right-products-title>view{
   flex:1;
