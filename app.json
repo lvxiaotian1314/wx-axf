@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/cart/cart",
     "pages/home/home",
     "pages/category/category",
-    "pages/cart/cart",
     "pages/mine/mine",
     "pages/index/index",
     "pages/logs/logs"
@@ -12,6 +12,12 @@
       "root": "productItem",
       "pages": [
         "productItem"
+      ]
+    },
+    {
+      "root": "userLogin",
+      "pages": [
+        "login"
       ]
     }
   ],

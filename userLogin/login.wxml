@@ -1,0 +1,14 @@
+
+<headerGray title="验证手机"></headerGray> 
+<view class='main'>
+  <!--顶部背景  -->
+  <view  class="{{bgBol==true?'top-bg':'top-bg active'}}" >
+    <text>为了方便您及时查询订单信息，鲜蜂侠需要验证您的手机号为查询帐号</text>
+  </view>
+  <!--手机号码  -->
+  <view class="section">
+    <input placeholder="手机号码" type="number" bindinput='inputValue' bindfocus='focus' bindblur='blur' />
+  </view>
+  <!--确定-->
+  <button class='confirm' bindtap="login">确定</button>
+</view>

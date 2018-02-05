@@ -1,0 +1,47 @@
+headerGray{
+  z-index: 999;
+}
+.top-bg{
+  height:166rpx;
+  background:#ffd600 url(https://s1.ax2x.com/2018/02/05/vDJbJ.png) 20px bottom no-repeat;
+  background-size:auto 85%;
+  position: relative;
+  transition: all .5s;
+  transform-origin: (0 0);
+  z-index: 999;
+}
+.top-bg>text{
+  position: absolute;
+  font-size:28rpx;
+  width:60%;
+  top:20px;
+  right:0;
+  transform: scale(1) .5s;
+  transition-delay: .15s;
+}
+.top-bg.active{
+  height: 0px;
+}
+.top-bg.active>text{
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transform: scale(0);
+}
+/*输入手机号码  */
+.section{
+  height:50px;
+  background:#fff;
+  padding-left:20px;
+  overflow: hidden;
+}
+.section>input{
+  height:20px;
+  margin-top:10px;
+  font-size:30rpx;
+}
+/* 确定  */
+.confirm{
+  width:95%;
+  margin:40px auto;
+  background:#ffd600;
+}
