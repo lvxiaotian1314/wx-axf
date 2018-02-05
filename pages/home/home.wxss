@@ -51,13 +51,7 @@ image{
   line-height: 96rpx;
   color:#999;
 }
-.product-title-more:after{
-  content: "";
-  display: inline-block;
-  width:40rpx;
-  height:96rpx;
-  vertical-align: top;
-  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAMAAADImI+JAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA/UExURUxpcV9fX11dXWNjY15eXl1dXVxcXFVVVWFhYV1dXVxcXF1dXVxcXF1dXV1dXV1dXV1dXVtbW1xcXFVVVV1dXboTcG8AAAAUdFJOUwAYsRIb2M8GFdWrtK630tt1uGkDwjJzxQAAAE1JREFUKM+10skNwCAUA1HWJMDPivuvlRYGifj85NO44h2bysGgUbkHXVC2CblxGZk8f5CvPgS76UGHVXdiLi91Bl1Q9syxJKnj4VI3APdgA3rXZybWAAAAAElFTkSuQmCC') 20rpx center no-repeat;
+.product-title-more{
   background-size:40rpx;
 }
 .product-bannar>image{
@@ -101,7 +95,7 @@ image{
   width:66rpx;
   height:66rpx;
   text-align: center;
-  line-height:66rpx;
+   line-height:56rpx; 
   color:#f40;
   font-size:48rpx;
   font-weight: bold;

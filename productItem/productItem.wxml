@@ -1,0 +1,37 @@
+<headerGray title="{{product.product_name+product.unit+'ml'}}">
+</headerGray>
+<view>
+  <scroll-view scroll-y class="main">
+    <!--商品图片  -->
+    <view class='productImg'>
+      <image src='{{product.imgs.max}}'></image>
+    </view>
+    <!--商品名称、规格  -->
+    <view class='productName'>{{product.product_name+product.unit+"ml"}}</view>
+    <!--商品价格  -->
+    <view class='productPrice'>{{product.price}}</view>
+    <!--商品详情  -->
+    <view class='productDetails'>
+      <view class='productDetails-title'>商品详情</view>
+      <view class='productDetails-brand'>品
+        <text class='c-zhan'>占占</text>牌
+        <text class='productDetails-name'>{{product.brand}}</text>
+      </view>
+      <view class='productDetails-unit'>产品规格
+        <text class='productDetails-name'>{{product.unit+"ml"}}</text>
+      </view>
+    </view>
+    <!--爱鲜蜂图  -->
+    <view class='axf-img'></view>
+  </scroll-view>
+  <view class='footer'>
+    <view class='footer-collect active'>收藏</view>
+    <view class='footer-addProduct'>
+      <view>添加商品:</view>
+      <view class='operate-num'>
+        <text></text><text class='num'>0</text><text></text>
+      </view>
+      <view class='shopping-car'><view class='cart-productNum'>0</view></view>
+    </view>
+  </view>
+</view>

@@ -8,3 +8,32 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.main{
+  position: absolute;
+  width:100%;
+  top:55px;
+}
+view{
+  box-sizing: border-box;
+}
+/* >  图标  */
+.more::after{
+  background-image: url(https://s1.ax2x.com/2018/02/05/homJa.png);
+  background-position: 20rpx 13px;
+  background-repeat: no-repeat;
+  background-size:50rpx;
+  content: "";
+  display: inline-block;
+  width:40rpx;
+  height:96rpx;
+  vertical-align: middle;
+}
+/*商品背景图  */
+.productImg{
+  background:url(https://s1.ax2x.com/2018/02/05/hohnY.png);
+  background-size:100%;
+}
+/*占位  */
+.e-zhan,.c-zhan{
+  visibility: hidden
+}

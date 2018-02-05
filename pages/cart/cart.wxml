@@ -15,7 +15,7 @@
       <text>收货地址</text>
       <text class='userInfo'>深圳市宝安区232</text>
     </view>
-    <view class='repair'>修改</view>
+    <view class='repair more'>修改</view>
   </view>
   <view class='supermarket'>
     <view class='market'>
@@ -29,7 +29,7 @@
       <view class="receive-goods">
         <text>收货时间</text>
         <text class='receive-time'>{{timeArray[0][timeIndex[0]]+" "+timeArray[1][timeIndex[1]] }}</text> 
-        <text>可预定</text>
+        <text class="more">可预定</text>
       </view>
       
     </picker>

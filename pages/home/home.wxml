@@ -16,7 +16,7 @@
       <!--商品头部  -->
       <view class="product-title">
         <text class="product-title-name" style="color:{{item.nameColor}};border-color:{{item.nameColor}}">{{item.name}}</text>
-        <text class='product-title-more'>更多</text>
+        <text class='product-title-more more'>更多</text>
       </view>
       <!--商品bannar-->
       <view class='product-bannar'>
@@ -24,7 +24,7 @@
       </view>
       <!--商品的展示-->
       <view class='product-productItem'>
-        <view wx:for="{{item.products}}" wx:for-index="idx" wx:for-item="itm" wx:if="{{idx<3}}">
+        <view wx:for="{{item.products}}" wx:for-index="idx" wx:for-item="itm" wx:if="{{idx<3}}" wx:key="{{idx}}" data-id="{{itm.id}}" bindtap="goProductitem">
           <image src="{{itm.imgs.min}}"></image>
           <view class='product-productItem-productName'>{{itm.product_name}}</view>
           <view class='product-productItem-productUnit'>{{itm.unit+"ml"}}</view>

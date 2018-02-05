@@ -1,0 +1,155 @@
+
+.main{
+  bottom:60px;
+}
+/* 商品图片  */
+.productImg{
+  background:#fff;
+  padding:10px 0;
+}
+.productImg>image{
+  display: block;
+  width:702rpx;
+  height:702rpx;
+  margin:0 auto;
+}
+/*商品名称、规格  */
+.productName{
+  text-align: center;
+  font-size:40rpx;
+  margin-top:3px;
+  background:#fff;
+  padding:10px 0;
+}
+/*商品价格  */
+.productPrice{
+  color:#f40;
+  font-weight: 700;
+  font-size: 40rpx;
+  text-align: center;
+  background:#fff;
+  padding-bottom:30px;
+}
+/*商品详情  */
+.productDetails{
+  height:150px;
+  background:#fff;
+  margin-top:10px;
+  overflow: hidden;
+}
+.productDetails-title{
+  font-size:30rpx;
+  text-align: center;
+  color:#e0bd6a;
+  margin-top: 20px;
+  background:url(https://s1.ax2x.com/2018/02/05/v5Yv9.png) no-repeat center center;
+  background-size:auto 5rpx;
+}
+.productDetails-brand,.productDetails-unit{
+  font-size: 30rpx;
+  color:#848c99;
+  margin-top:20px;
+  padding-left:20px;
+}
+.productDetails-name{
+  color:#333;
+  margin-left:40rpx;
+}
+.axf-img{
+  height:632rpx;
+  background: url(https://s1.ax2x.com/2018/02/05/v5oGd.jpg) no-repeat;
+  background-size:100%; 
+  margin-top:10px;
+  margin-bottom:10px;
+}
+/*底部  */
+.footer{
+  height:60px;
+  background:#fff;
+  position: absolute;
+  width: 100%;
+  left:0;
+  bottom:0;
+  box-shadow: 0 -2px 1px #eee;
+}
+/*收藏  */
+.footer-collect{
+  width:48px;
+  height:100%;
+  background: url(https://s1.ax2x.com/2018/02/05/v5SVN.png) no-repeat center 10px;
+  background-size:36rpx auto;
+  padding-top:30px;
+  text-align: center;
+  font-size:30rpx;
+  float:left;
+}
+.footer-collect.active{
+  background-image: url(https://s1.ax2x.com/2018/02/05/v5i89.png);
+}
+/*添加商品  */
+.footer-addProduct{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:50px;
+}
+.footer-addProduct>view{
+  float:left;
+}
+.footer-addProduct>view:nth-of-type(1){
+  line-height: 60px;
+  font-size:34rpx;
+}
+/*添加、减少商品*/
+.operate-num{
+  margin-left:60px;
+}
+.operate-num>text:nth-of-type(2n+1){
+  display: inline-block;
+  vertical-align: top;
+  margin-top:14px;
+  text-align: center;
+  width:33px;
+  height:33px;
+  border:1px solid #e0e0e0;
+  border-radius: 50%;
+  background: #ff4300  url(https://s1.ax2x.com/2018/02/05/v9sMz.png) left center no-repeat;
+  background-size:200% 100%;
+}
+.operate-num>text:nth-of-type(3){
+   background: #ff4300  url(https://s1.ax2x.com/2018/02/05/v9sMz.png) right center no-repeat;
+   background-size:200% 100%; 
+   margin-left:10px;
+}
+.num{
+  display: inline-block;
+  margin-left:10px;
+  height:60px;
+  line-height: 60px;  
+}
+/*购物车按钮  */
+.shopping-car{
+  width:72px;
+  height:72px;
+  background:#ffd600 url(https://s1.ax2x.com/2018/02/05/v9IJX.png) center no-repeat;
+  background-size:80%;
+  border-radius: 50%;
+  position: absolute;
+  right:10px;
+  top:-36px;
+}
+/*购物车上的商品数量  */
+.cart-productNum{
+  width:22px;
+  height:22px;
+  color:#fff;
+  text-align: center;
+  line-height: 22px;
+  position: absolute;
+  right:0;
+  top:0;
+  background:#f40;
+  border-radius: 50%;
+  font-size:12px;
+}
