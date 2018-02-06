@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+let app = getApp()
 Page({
 
   /**
@@ -14,10 +15,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.navigateTo({
-      url: '/userLogin/login'
-    })
-    return;
+    // 登录的用户信息
+    let user=app.globalData.userInfo
+    if(user===null){
+      // 跳转登录页面
+        wx.navigateTo({
+          url: '/userLogin/login'
+        })
+        return
+    }
     let date=new Date()
     let hour=date.getHours()
     let minutes=date.getMinutes()

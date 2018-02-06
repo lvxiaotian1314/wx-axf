@@ -1,6 +1,6 @@
 //app.js
 let api = require('../utils/api.js')
-
+let app=getApp()
 // pages/category/category.js
 Page({
 
@@ -9,7 +9,7 @@ Page({
    */
   data: {
     bgBol:true,
-    phone:0,
+    phone:0
   },
 
   /**
@@ -61,7 +61,8 @@ Page({
       return
     }
     let user = {
-      phone: this.data.phone
+      "phone": this.data.phone,
+      "cart": []
     }
     wx.request({
       url: api.host+"/users",
@@ -72,10 +73,13 @@ Page({
           for(let i=0;i<tmpData.length;i++){
             if(tmpData[i].phone==this.data.phone){
               bol=false
+              // 用户信息录入本地状态
+              app.globalData.userInfo=tmpData[i]
             }
           }
           // 已注册
           if(!bol){
+            // 用户信息录入本地状态
             wx.showModal({
               title: '提示',
               content: '登录成功',
@@ -108,6 +112,8 @@ Page({
       data:user,
       success:res=>{
         if(res.data.id>0){
+          app.globalData.userInfo=res.data
+          console.log(app.globalData.userInfo)
           wx.showModal({
             title: '提示',
             content: '注册成功',

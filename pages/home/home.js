@@ -1,5 +1,7 @@
 // pages/home/home.js
 // let api=require('/utils/api.js')
+let app = getApp()
+let api = require("../../utils/api.js")
 Page({
 
   /**
@@ -23,8 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let app = getApp()
-    let api=require("../../utils/api.js")
+    
     this.setData({
       categories:app.globalData.categories
     })
@@ -42,54 +43,6 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
   // 跳转商品详情页
   goProductitem(event){
     // 商品id
@@ -97,6 +50,45 @@ Page({
     wx.navigateTo({
       url: '/productItem/productItem?id=' + id
     })
-    
+  },
+  // 添加商品
+  addProduct(event){
+    // 商品数量添加
+    let id=event.target.dataset.productid
+    let categories=this.data.categories
+    for(let i=0;i<categories.length;i++){
+      let products=categories[i].products
+      for(let j=0;j<products.length;j++){
+        if(products[j].id===id){
+          products[j].num++
+          break
+        }
+      }
+    }
+    this.setData({
+      categories:categories
+    })
+    app.globalData.categories=categories
+    console.log(this.data.categories)
+    return
+    console.log(app.globalData.userInfo)
+    // 用户信息
+    let user=app.globalData.userInfo 
+    if(user===null){
+      wx.navigateTo({
+        url: '/userLogin/login'
+      })
+    }else{
+      // 用户购物车初始没有商品直接添加
+      if(!user.cart){
+        user.cart=[]
+        let newProduct=JSON.parse(JSON.stringify(product))
+        newProduct.num=1
+        user.cart.push(newProduct)
+      }else{
+        let carts=user.cart
+        console.log(carts)
+      }
+    }
   }
 })

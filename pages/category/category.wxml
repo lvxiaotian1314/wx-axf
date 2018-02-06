@@ -3,22 +3,22 @@
 <view>
   <!--左侧分类按钮  -->
   <scroll-view scroll-y class="category-left">
-    <view class="{{index===activeIndex?'category-left-categoryName active':'category-left-categoryName'}}" wx:for="{{categories}}" wx:key="{{item.id}}" data-index="{{index}}" bindtap="select">{{item.name}} </view>
+    <view class="{{index===activeIndex?'category-left-categoryName active':'category-left-categoryName'}}" wx:for="{{categories}}" wx:key="{{item.id}}" data-index="{{index}}" catchtap="select">{{item.name}} </view>
   </scroll-view>
   <!--右侧商品展示列表-->
   <view class="{{AllCategoryBol==true||SortCategoryBol==true?'category-right':'category-right active'}}">
     <view class='category-right-products'>
-      <view class='cover' wx:if="{{AllCategoryBol==true||SortCategoryBol==true}}" bindtap='changeBol'></view>
+      <view class='cover' wx:if="{{AllCategoryBol==true||SortCategoryBol==true}}" catchtap='changeBol'></view>
       <view class='category-right-products-title'>
-        <view bindtap="changeAllCategoryBol" class="{{AllCategoryBol===true?'active':''}}">全部分类</view>
-        <view bindtap="changeSortCategoryBol" class="{{SortCategoryBol===true?'active':''}}">综合排序</view>
+        <view catchtap="changeAllCategoryBol" class="{{AllCategoryBol===true?'active':''}}">全部分类</view>
+        <view catchtap="changeSortCategoryBol" class="{{SortCategoryBol===true?'active':''}}">综合排序</view>
       </view>
       <view class='category-right-products-categyContent' wx:if="{{AllCategoryBol}}">
-        <view class="{{activeAllCategory=='全部分类'?'active':''}}" data-name="全部分类" bindtap="changeActiveCategory">全部分类</view>
-        <view wx:for="{{activeCategory.cids}}" wx:key="{{item.id}}" class="{{activeAllCategory==item.name?'active':''}}" data-name="{{item.name}}" bindtap="changeActiveCategory" data-index="{{index}}">{{item.name}}</view>
+        <view class="{{activeAllCategory=='全部分类'?'active':''}}" data-name="全部分类" catchtap="changeActiveCategory">全部分类</view>
+        <view wx:for="{{activeCategory.cids}}" wx:key="{{item.id}}" class="{{activeAllCategory==item.name?'active':''}}" data-name="{{item.name}}" catchtap="changeActiveCategory" data-index="{{index}}">{{item.name}}</view>
       </view>
       <view class='category-right-products-categyContent' wx:if="{{SortCategoryBol}}">
-        <view wx:for="{{sortCategory}}" wx:key="{{index}}" class='{{activeSortCategory==item?"active":""}}' data-name="{{item}}" bindtap="changeSortCategory">{{item}}</view>
+        <view wx:for="{{sortCategory}}" wx:key="{{index}}" class='{{activeSortCategory==item?"active":""}}' data-name="{{item}}" catchtap="changeSortCategory">{{item}}</view>
       </view>
       <!--商品列表  -->
       <scroll-view scroll-y class='category-right-products-productsList'>
@@ -27,7 +27,9 @@
           <view>{{item.product_name}}</view>
           <view>{{item.unit+"ml"}}</view>
           <view>{{"￥"+item.price}}</view>
-          <text class="addProduct">+</text>
+          <text class="rduceProduct" wx-if="{{item.num>0}}" data-productid="{{item.id}}" catchtap="reduceProduct">-</text>
+          <text class='productNum' wx-if="{{item.num>0}}">{{item.num}}</text>
+          <view class="addProduct" data-productid="{{item.id}}" catchtap="addProduct" >+</view>
         </view>
       </scroll-view>
     </view>

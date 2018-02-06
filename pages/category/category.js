@@ -22,7 +22,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     let app=getApp()
     this.setData({
       categories:app.globalData.categories,
@@ -30,7 +30,6 @@ Page({
       initActiveProduct: JSON.parse(JSON.stringify(app.globalData.categories[0].products)),
       activeProduct: app.globalData.categories[0].products
     })
-     console.info(this.data.initActiveProduct)
   },
   // 左侧选中当前主分类
   select:function(event){
@@ -125,9 +124,39 @@ Page({
       activeProduct:sortProduct
     })
 
+  },
+  // 添加商品
+  addProduct(event){
+    console.log("我加")
+    let productId=event.target.dataset.productid
+    this.operateProduct(true,productId)
+  },
+  // 减少商品
+  reduceProduct(event){
+    let productId = event.target.dataset.productid
+    this.operateProduct(false, productId)
+  },
+  // 对商品加、减
+  operateProduct(bol,id){
+    let products=this.data.activeProduct
+    if(bol){
+      for(let i=0;i<products.length;i++){
+        if(products[i].id===id){
+          products[i].num++
+          break
+        }
+      }
+    }else{
+      for (let i = 0; i < products.length; i++) {
+        if (products[i].id === id) {
+          products[i].num--
+          break
+        }
+      }
+    }
+
+    this.setData({
+      activeProduct: products
+    })
   }
-
-
-
-
 })

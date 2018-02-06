@@ -145,20 +145,31 @@ view{
   margin-top:20rpx;
 }
 /*添加商品按钮*/
-.addProduct{
+.addProduct,.rduceProduct{
   width:33px;
   height:33px;
   border:1px solid #ccc;
   border-radius: 50%;
   position: absolute;
-  right:20rpx;
-  bottom:20rpx;
+  right:10px;
+  bottom:10px;
   font-weight: bold;
   color:#ff3800;
   text-align: center;
   line-height: 30px;
   text-indent: 0!important;
   font-size:48rpx!important;
+}
+/*减少商品按钮  */
+.rduceProduct{
+  right:60px;
+}
+/*商品数量  */
+.productNum{
+  position: absolute;
+  right:46px;
+  bottom:19px;
+  font-size:12px;
 }
 /*遮罩层*/
 .cover{
